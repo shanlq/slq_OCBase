@@ -8,6 +8,7 @@
 
 #import "RuntimeVC.h"
 #import <objc/runtime.h>
+#import "NSArray+empty.h"
 
 @interface RuntimeVC ()
 
@@ -19,9 +20,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    Model *model = [[Model alloc] init];
-    [self RuntimeSelecterTest];
-    [self RuntimePropertyWithModelName:@"Model"];
+//    Model *model = [[Model alloc] init];
+//    [self RuntimeSelecterTest];
+//    [self RuntimePropertyWithModelName:@"Model"];
+    [self RuntimeBlackMagic];
 }
 
 -(void)Test1
@@ -42,7 +44,7 @@
     NSString *str = @"slq";
     
     //1、NSInvocation可处理任意类型的action（包括参数>2、有返回值）
-    NSMethodSignature *signature = [target methodSignatureForSelector:action];             //获取action签名
+    NSMethodSignature *signature = [target methodSignatureForSelector:action];        //获取action签名
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     [invocation setArgument:&dic atIndex:2];           //设置参数，必须从2开始，因为0->target、1->action
     [invocation setArgument:&str atIndex:3];           //参数下标依次往后排
@@ -73,7 +75,7 @@
         }
         else if( !strcmp(returnType, @encode(NSInteger)) ){
             returnValue = [NSNumber numberWithInteger:*((NSInteger*)buffer)];
-            NSLog(@"返回值NSInteger类型：%ld", [returnValue integerValue]);
+            NSLog(@"返回值NSInteger类型：%d", [returnValue intValue]);
         }
         returnValue = [NSValue valueWithBytes:buffer objCType:returnType];
     }
@@ -86,6 +88,7 @@
 {
     unsigned int pNum;
     unsigned int mNum;
+    //获取属性列表
     objc_property_t *properties = class_copyPropertyList(NSClassFromString(modelName), &pNum);
     //获取的方法列表（包括自定义方法和由@property自动生成的setter、getter方法）
     objc_property_t *methodList = class_copyMethodList(NSClassFromString(modelName), &mNum);
@@ -154,20 +157,15 @@
         }
     }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//runtime黑魔法（Method Swizzling）：通过method_exchangeImplementations()方法，用自定义方法替换系统方法，以做相关默认处理
+//参考：http://www.cocoachina.com/ios/20160121/15076.html
+-(void)RuntimeBlackMagic
+{
+    //1、数组越界
+    NSArray *arr = @[@"shanlq", @"yanliu"];
+    //这里调用的arr[2]即[arr objectAtIndex:2],会执行到customObjectAtIndex:方法
+    NSLog(@"输出数组数据：%@", arr[2]);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

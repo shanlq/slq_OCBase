@@ -60,25 +60,11 @@
     char num[4] = "slq";
     const char *x = num;      //常量指针 则可以改变x的指向即可以改变x指针变量的内容，不可改变x所指向内存的内容即*x
     const a y = num;          //指针常量 则可以改变y指向内存的内容即*y，而不可改变y的内容即y的指向。（优先级 系统类型>自定义类型 即等于a const y = num，const会先修饰作用到y变量）
-    x++;                      //x的指向可改变
+    x++;                      //x的指向可改变，即这里得到x是num[1]的地址，*x是num[1]
 //    y++;                    //y的内容不可改变，即y的指向不可改变
     *y = num[1];              //y所指向内存的内容可改变
-    NSLog(@"测试typedef：%c, %c", *x, *y);
+    NSLog(@"测试typedef：%c, %c", *x, *y);   //*x与*y值相同
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

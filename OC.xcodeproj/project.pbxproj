@@ -25,6 +25,47 @@
 		18CDC8C21FC7B07C000BC28B /* FatherClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CDC8C11FC7B07C000BC28B /* FatherClass.m */; };
 		18CDC8C51FC7B087000BC28B /* SonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CDC8C41FC7B087000BC28B /* SonClass.m */; };
 		18CDC8C81FC7B124000BC28B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CDC8C71FC7B124000BC28B /* ViewController.m */; };
+		3B01E75520A98EA200250F9E /* ProxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B01E75420A98EA200250F9E /* ProxyViewController.m */; };
+		3B01E75820A98EC700250F9E /* proxyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B01E75720A98EC700250F9E /* proxyView.m */; };
+		3B01E75B20A993FC00250F9E /* SProxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B01E75A20A993FC00250F9E /* SProxyViewController.m */; };
+		3B0CA836217F248F007F1AA7 /* RunloopTbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0CA834217F248F007F1AA7 /* RunloopTbCell.m */; };
+		3B0CA837217F248F007F1AA7 /* RunloopTbCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0CA835217F248F007F1AA7 /* RunloopTbCell.xib */; };
+		3B19C9742080A2B9008A0A7E /* SingtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C9732080A2B9008A0A7E /* SingtonManager.m */; };
+		3B19C9782080AF65008A0A7E /* FactoryMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C9772080AF65008A0A7E /* FactoryMethod.m */; };
+		3B19C97B2080B48C008A0A7E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B19C97A2080B48C008A0A7E /* TestViewController.m */; };
+		3B21BD3920AC2ACC00C1C2B3 /* CombinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21BD3820AC2ACC00C1C2B3 /* CombinationViewController.m */; };
+		3B21BD3C20AC2AEF00C1C2B3 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21BD3B20AC2AEF00C1C2B3 /* TestObject.m */; };
+		3B5A10092180035900FC3F75 /* banner3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A10082180035900FC3F75 /* banner3.png */; };
+		3B626278218954BC009AC53B /* NSArray+empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B626277218954BC009AC53B /* NSArray+empty.m */; };
+		3B85402B208DD48A004F5479 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85402A208DD48A004F5479 /* Friend.m */; };
+		3B85402F208DE86F004F5479 /* IteratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85402E208DE86F004F5479 /* IteratorViewController.m */; };
+		3B854035208DF715004F5479 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B854034208DF715004F5479 /* Element.m */; };
+		3B854038208DF71F004F5479 /* CustomSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B854037208DF71F004F5479 /* CustomSet.m */; };
+		3B85403B208DF730004F5479 /* Iterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85403A208DF730004F5479 /* Iterator.m */; };
+		3B85DA6520AD176500FD23CA /* AdapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85DA6420AD176500FD23CA /* AdapterViewController.m */; };
+		3B85DA6820AD177C00FD23CA /* adaptorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85DA6720AD177C00FD23CA /* adaptorModel.m */; };
+		3B85DA6B20AD188300FD23CA /* adaptorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85DA6A20AD188300FD23CA /* adaptorView.m */; };
+		3B85DA7020AD305200FD23CA /* DecorateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85DA6F20AD305200FD23CA /* DecorateViewController.m */; };
+		3B85DA7320AD306D00FD23CA /* DecorateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B85DA7220AD306D00FD23CA /* DecorateObject.m */; };
+		3B8B3433208EC1CC00E8B55C /* ObserverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3432208EC1CC00E8B55C /* ObserverViewController.m */; };
+		3B8B3440208EC83900E8B55C /* MouldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B343F208EC83900E8B55C /* MouldViewController.m */; };
+		3B8B3443208EC87E00E8B55C /* SonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3442208EC87E00E8B55C /* SonViewController.m */; };
+		3B8B3447208ED01000E8B55C /* CommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3446208ED01000E8B55C /* CommandViewController.m */; };
+		3B8B344A208F002800E8B55C /* CommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3449208F002800E8B55C /* CommandManager.m */; };
+		3B8B344D208F0C0900E8B55C /* CommandImplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B344C208F0C0900E8B55C /* CommandImplement.m */; };
+		3BB2824320844DF80095B57E /* AbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2824220844DF80095B57E /* AbstractFactory.m */; };
+		3BC6284D208DB29B00A08819 /* CreatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6284C208DB29B00A08819 /* CreatViewController.m */; };
+		3BC62850208DB32B00A08819 /* girlFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC6284F208DB32B00A08819 /* girlFriend.m */; };
+		3BC62853208DB3D000A08819 /* grilInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC62852208DB3D000A08819 /* grilInfo.m */; };
+		3BC62856208DB5B300A08819 /* yl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC62855208DB5B300A08819 /* yl.m */; };
+		3BC8604D20A2D4D300013D6E /* MediatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8604C20A2D4D300013D6E /* MediatorViewController.m */; };
+		3BC8605120A2E4E900013D6E /* mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8605020A2E4E900013D6E /* mediator.m */; };
+		3BC8605420A2E4F300013D6E /* user.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8605320A2E4F300013D6E /* user.m */; };
+		3BC8605720A2F00000013D6E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC8605620A2F00000013D6E /* ResultViewController.m */; };
+		3BCCCBC4207F0ADD0039486C /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCCCBC3207F0ADD0039486C /* KVCViewController.m */; };
+		3BCCCBC7207F53BE0039486C /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCCCBC6207F53BE0039486C /* KVOViewController.m */; };
+		3BDF249220A1454300C4F0F3 /* StrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF249120A1454300C4F0F3 /* StrategyViewController.m */; };
+		3BDF249520A1472800C4F0F3 /* thisStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF249420A1472800C4F0F3 /* thisStrategy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +104,88 @@
 		18CDC8C41FC7B087000BC28B /* SonClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SonClass.m; sourceTree = "<group>"; };
 		18CDC8C61FC7B124000BC28B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		18CDC8C71FC7B124000BC28B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B01E75320A98EA200250F9E /* ProxyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyViewController.h; sourceTree = "<group>"; };
+		3B01E75420A98EA200250F9E /* ProxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProxyViewController.m; sourceTree = "<group>"; };
+		3B01E75620A98EC700250F9E /* proxyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = proxyView.h; sourceTree = "<group>"; };
+		3B01E75720A98EC700250F9E /* proxyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = proxyView.m; sourceTree = "<group>"; };
+		3B01E75920A993FC00250F9E /* SProxyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SProxyViewController.h; sourceTree = "<group>"; };
+		3B01E75A20A993FC00250F9E /* SProxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SProxyViewController.m; sourceTree = "<group>"; };
+		3B0CA833217F248F007F1AA7 /* RunloopTbCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopTbCell.h; sourceTree = "<group>"; };
+		3B0CA834217F248F007F1AA7 /* RunloopTbCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopTbCell.m; sourceTree = "<group>"; };
+		3B0CA835217F248F007F1AA7 /* RunloopTbCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunloopTbCell.xib; sourceTree = "<group>"; };
+		3B19C9712080A0B0008A0A7E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3B19C9722080A2B9008A0A7E /* SingtonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingtonManager.h; sourceTree = "<group>"; };
+		3B19C9732080A2B9008A0A7E /* SingtonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingtonManager.m; sourceTree = "<group>"; };
+		3B19C9762080AF65008A0A7E /* FactoryMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryMethod.h; sourceTree = "<group>"; };
+		3B19C9772080AF65008A0A7E /* FactoryMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryMethod.m; sourceTree = "<group>"; };
+		3B19C9792080B48C008A0A7E /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3B19C97A2080B48C008A0A7E /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		3B21BD3720AC2ACC00C1C2B3 /* CombinationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombinationViewController.h; sourceTree = "<group>"; };
+		3B21BD3820AC2ACC00C1C2B3 /* CombinationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombinationViewController.m; sourceTree = "<group>"; };
+		3B21BD3A20AC2AEF00C1C2B3 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		3B21BD3B20AC2AEF00C1C2B3 /* TestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		3B5A10082180035900FC3F75 /* banner3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner3.png; sourceTree = "<group>"; };
+		3B626276218954BC009AC53B /* NSArray+empty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+empty.h"; sourceTree = "<group>"; };
+		3B626277218954BC009AC53B /* NSArray+empty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+empty.m"; sourceTree = "<group>"; };
+		3B854029208DD48A004F5479 /* Friend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		3B85402A208DD48A004F5479 /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		3B85402D208DE86F004F5479 /* IteratorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IteratorViewController.h; sourceTree = "<group>"; };
+		3B85402E208DE86F004F5479 /* IteratorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IteratorViewController.m; sourceTree = "<group>"; };
+		3B854033208DF715004F5479 /* Element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		3B854034208DF715004F5479 /* Element.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		3B854036208DF71F004F5479 /* CustomSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSet.h; sourceTree = "<group>"; };
+		3B854037208DF71F004F5479 /* CustomSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSet.m; sourceTree = "<group>"; };
+		3B854039208DF730004F5479 /* Iterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iterator.h; sourceTree = "<group>"; };
+		3B85403A208DF730004F5479 /* Iterator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Iterator.m; sourceTree = "<group>"; };
+		3B85DA6320AD176500FD23CA /* AdapterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterViewController.h; sourceTree = "<group>"; };
+		3B85DA6420AD176500FD23CA /* AdapterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterViewController.m; sourceTree = "<group>"; };
+		3B85DA6620AD177C00FD23CA /* adaptorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = adaptorModel.h; sourceTree = "<group>"; };
+		3B85DA6720AD177C00FD23CA /* adaptorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = adaptorModel.m; sourceTree = "<group>"; };
+		3B85DA6920AD188300FD23CA /* adaptorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = adaptorView.h; sourceTree = "<group>"; };
+		3B85DA6A20AD188300FD23CA /* adaptorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = adaptorView.m; sourceTree = "<group>"; };
+		3B85DA6C20AD195300FD23CA /* adaptorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = adaptorProtocol.h; sourceTree = "<group>"; };
+		3B85DA6E20AD305200FD23CA /* DecorateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecorateViewController.h; sourceTree = "<group>"; };
+		3B85DA6F20AD305200FD23CA /* DecorateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecorateViewController.m; sourceTree = "<group>"; };
+		3B85DA7120AD306D00FD23CA /* DecorateObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecorateObject.h; sourceTree = "<group>"; };
+		3B85DA7220AD306D00FD23CA /* DecorateObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecorateObject.m; sourceTree = "<group>"; };
+		3B8B3431208EC1CC00E8B55C /* ObserverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverViewController.h; sourceTree = "<group>"; };
+		3B8B3432208EC1CC00E8B55C /* ObserverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverViewController.m; sourceTree = "<group>"; };
+		3B8B343E208EC83900E8B55C /* MouldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouldViewController.h; sourceTree = "<group>"; };
+		3B8B343F208EC83900E8B55C /* MouldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouldViewController.m; sourceTree = "<group>"; };
+		3B8B3441208EC87E00E8B55C /* SonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SonViewController.h; sourceTree = "<group>"; };
+		3B8B3442208EC87E00E8B55C /* SonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SonViewController.m; sourceTree = "<group>"; };
+		3B8B3445208ED01000E8B55C /* CommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandViewController.h; sourceTree = "<group>"; };
+		3B8B3446208ED01000E8B55C /* CommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandViewController.m; sourceTree = "<group>"; };
+		3B8B3448208F002800E8B55C /* CommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandManager.h; sourceTree = "<group>"; };
+		3B8B3449208F002800E8B55C /* CommandManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandManager.m; sourceTree = "<group>"; };
+		3B8B344B208F0C0900E8B55C /* CommandImplement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandImplement.h; sourceTree = "<group>"; };
+		3B8B344C208F0C0900E8B55C /* CommandImplement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandImplement.m; sourceTree = "<group>"; };
+		3BB2824120844DF80095B57E /* AbstractFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFactory.h; sourceTree = "<group>"; };
+		3BB2824220844DF80095B57E /* AbstractFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFactory.m; sourceTree = "<group>"; };
+		3BC6284B208DB29B00A08819 /* CreatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatViewController.h; sourceTree = "<group>"; };
+		3BC6284C208DB29B00A08819 /* CreatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreatViewController.m; sourceTree = "<group>"; };
+		3BC6284E208DB32B00A08819 /* girlFriend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = girlFriend.h; sourceTree = "<group>"; };
+		3BC6284F208DB32B00A08819 /* girlFriend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = girlFriend.m; sourceTree = "<group>"; };
+		3BC62851208DB3D000A08819 /* grilInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = grilInfo.h; sourceTree = "<group>"; };
+		3BC62852208DB3D000A08819 /* grilInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = grilInfo.m; sourceTree = "<group>"; };
+		3BC62854208DB5B300A08819 /* yl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yl.h; sourceTree = "<group>"; };
+		3BC62855208DB5B300A08819 /* yl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yl.m; sourceTree = "<group>"; };
+		3BC8604B20A2D4D300013D6E /* MediatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediatorViewController.h; sourceTree = "<group>"; };
+		3BC8604C20A2D4D300013D6E /* MediatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediatorViewController.m; sourceTree = "<group>"; };
+		3BC8604F20A2E4E900013D6E /* mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mediator.h; sourceTree = "<group>"; };
+		3BC8605020A2E4E900013D6E /* mediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mediator.m; sourceTree = "<group>"; };
+		3BC8605220A2E4F300013D6E /* user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
+		3BC8605320A2E4F300013D6E /* user.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = user.m; sourceTree = "<group>"; };
+		3BC8605520A2F00000013D6E /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		3BC8605620A2F00000013D6E /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		3BCCCBC2207F0ADD0039486C /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
+		3BCCCBC3207F0ADD0039486C /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
+		3BCCCBC5207F53BE0039486C /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		3BCCCBC6207F53BE0039486C /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		3BDF249020A1454300C4F0F3 /* StrategyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StrategyViewController.h; sourceTree = "<group>"; };
+		3BDF249120A1454300C4F0F3 /* StrategyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StrategyViewController.m; sourceTree = "<group>"; };
+		3BDF249320A1472800C4F0F3 /* thisStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thisStrategy.h; sourceTree = "<group>"; };
+		3BDF249420A1472800C4F0F3 /* thisStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = thisStrategy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +223,14 @@
 		189149A01FCBB8920064BF6B /* Runloop */ = {
 			isa = PBXGroup;
 			children = (
+				3B5A10082180035900FC3F75 /* banner3.png */,
 				189149A11FCBB8A70064BF6B /* RunloopVC.h */,
 				189149A41FCBFE8B0064BF6B /* RunloopVC.m */,
 				189BA4811FCCF80600425BAA /* MyThread.h */,
 				189BA4821FCCF80600425BAA /* MyThread.m */,
+				3B0CA833217F248F007F1AA7 /* RunloopTbCell.h */,
+				3B0CA834217F248F007F1AA7 /* RunloopTbCell.m */,
+				3B0CA835217F248F007F1AA7 /* RunloopTbCell.xib */,
 			);
 			path = Runloop;
 			sourceTree = "<group>";
@@ -115,6 +242,8 @@
 				18B6D9D01FC8F88300B5C269 /* RuntimeVC.m */,
 				18B6D9D21FC8F89C00B5C269 /* Model.h */,
 				18B6D9D31FC8F89C00B5C269 /* Model.m */,
+				3B626276218954BC009AC53B /* NSArray+empty.h */,
+				3B626277218954BC009AC53B /* NSArray+empty.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -139,6 +268,8 @@
 		18C755DB1F96FE190070395F /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				3B19C96C2080A01A008A0A7E /* 设计模式 */,
+				3B36E248207E07BF0060A875 /* KvcKvo */,
 				187A4F4E1FCE43720080D4B9 /* Thread */,
 				189149A01FCBB8920064BF6B /* Runloop */,
 				18B6D9CE1FC8F86700B5C269 /* Runtime */,
@@ -151,6 +282,7 @@
 				18C755E71F96FE190070395F /* LaunchScreen.storyboard */,
 				18C755EA1F96FE190070395F /* Info.plist */,
 				18C755EB1F96FE190070395F /* main.m */,
+				3B19C9712080A0B0008A0A7E /* PrefixHeader.pch */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -179,6 +311,207 @@
 				18CDC8C71FC7B124000BC28B /* ViewController.m */,
 			);
 			path = LoadAndInitialize;
+			sourceTree = "<group>";
+		};
+		3B01E75220A98E7200250F9E /* 代理模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B01E75320A98EA200250F9E /* ProxyViewController.h */,
+				3B01E75420A98EA200250F9E /* ProxyViewController.m */,
+				3B01E75920A993FC00250F9E /* SProxyViewController.h */,
+				3B01E75A20A993FC00250F9E /* SProxyViewController.m */,
+				3B01E75620A98EC700250F9E /* proxyView.h */,
+				3B01E75720A98EC700250F9E /* proxyView.m */,
+			);
+			path = "代理模式";
+			sourceTree = "<group>";
+		};
+		3B19C96C2080A01A008A0A7E /* 设计模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B85DA6D20AD300C00FD23CA /* 装饰者模式 */,
+				3B85DA6220AD173500FD23CA /* 适配器模式 */,
+				3B21BD3620AC2A7C00C1C2B3 /* 组合模式 */,
+				3B01E75220A98E7200250F9E /* 代理模式 */,
+				3BC8604E20A2D4EE00013D6E /* 中介者模式 */,
+				3BDF248F20A144F200C4F0F3 /* 策略模式 */,
+				3B8B3444208ECFED00E8B55C /* 命令模式 */,
+				3B8B343D208EC83900E8B55C /* 模板方法 */,
+				3B8B3430208EC19700E8B55C /* 观察者模式 */,
+				3B85402C208DE837004F5479 /* 迭代器模式 */,
+				3B854028208DD45E004F5479 /* 原型模式 */,
+				3BC6284A208DB27300A08819 /* 建造者模式 */,
+				3B19C9752080AF10008A0A7E /* 工厂方法 */,
+				3B19C96D2080A01A008A0A7E /* 单例 */,
+			);
+			path = "设计模式";
+			sourceTree = "<group>";
+		};
+		3B19C96D2080A01A008A0A7E /* 单例 */ = {
+			isa = PBXGroup;
+			children = (
+				3B19C9722080A2B9008A0A7E /* SingtonManager.h */,
+				3B19C9732080A2B9008A0A7E /* SingtonManager.m */,
+			);
+			path = "单例";
+			sourceTree = "<group>";
+		};
+		3B19C9752080AF10008A0A7E /* 工厂方法 */ = {
+			isa = PBXGroup;
+			children = (
+				3B19C9762080AF65008A0A7E /* FactoryMethod.h */,
+				3B19C9772080AF65008A0A7E /* FactoryMethod.m */,
+				3B19C9792080B48C008A0A7E /* TestViewController.h */,
+				3B19C97A2080B48C008A0A7E /* TestViewController.m */,
+				3BB2824120844DF80095B57E /* AbstractFactory.h */,
+				3BB2824220844DF80095B57E /* AbstractFactory.m */,
+			);
+			path = "工厂方法";
+			sourceTree = "<group>";
+		};
+		3B21BD3620AC2A7C00C1C2B3 /* 组合模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B21BD3720AC2ACC00C1C2B3 /* CombinationViewController.h */,
+				3B21BD3820AC2ACC00C1C2B3 /* CombinationViewController.m */,
+				3B21BD3A20AC2AEF00C1C2B3 /* TestObject.h */,
+				3B21BD3B20AC2AEF00C1C2B3 /* TestObject.m */,
+			);
+			path = "组合模式";
+			sourceTree = "<group>";
+		};
+		3B36E248207E07BF0060A875 /* KvcKvo */ = {
+			isa = PBXGroup;
+			children = (
+				3BCCCBC2207F0ADD0039486C /* KVCViewController.h */,
+				3BCCCBC3207F0ADD0039486C /* KVCViewController.m */,
+				3BCCCBC5207F53BE0039486C /* KVOViewController.h */,
+				3BCCCBC6207F53BE0039486C /* KVOViewController.m */,
+			);
+			path = KvcKvo;
+			sourceTree = "<group>";
+		};
+		3B854028208DD45E004F5479 /* 原型模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B854029208DD48A004F5479 /* Friend.h */,
+				3B85402A208DD48A004F5479 /* Friend.m */,
+			);
+			path = "原型模式";
+			sourceTree = "<group>";
+		};
+		3B85402C208DE837004F5479 /* 迭代器模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B85402D208DE86F004F5479 /* IteratorViewController.h */,
+				3B85402E208DE86F004F5479 /* IteratorViewController.m */,
+				3B854033208DF715004F5479 /* Element.h */,
+				3B854034208DF715004F5479 /* Element.m */,
+				3B854036208DF71F004F5479 /* CustomSet.h */,
+				3B854037208DF71F004F5479 /* CustomSet.m */,
+				3B854039208DF730004F5479 /* Iterator.h */,
+				3B85403A208DF730004F5479 /* Iterator.m */,
+			);
+			path = "迭代器模式";
+			sourceTree = "<group>";
+		};
+		3B85DA6220AD173500FD23CA /* 适配器模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B85DA6320AD176500FD23CA /* AdapterViewController.h */,
+				3B85DA6420AD176500FD23CA /* AdapterViewController.m */,
+				3B85DA6620AD177C00FD23CA /* adaptorModel.h */,
+				3B85DA6720AD177C00FD23CA /* adaptorModel.m */,
+				3B85DA6920AD188300FD23CA /* adaptorView.h */,
+				3B85DA6A20AD188300FD23CA /* adaptorView.m */,
+				3B85DA6C20AD195300FD23CA /* adaptorProtocol.h */,
+			);
+			path = "适配器模式";
+			sourceTree = "<group>";
+		};
+		3B85DA6D20AD300C00FD23CA /* 装饰者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B85DA6E20AD305200FD23CA /* DecorateViewController.h */,
+				3B85DA6F20AD305200FD23CA /* DecorateViewController.m */,
+				3B85DA7120AD306D00FD23CA /* DecorateObject.h */,
+				3B85DA7220AD306D00FD23CA /* DecorateObject.m */,
+			);
+			path = "装饰者模式";
+			sourceTree = "<group>";
+		};
+		3B8B3430208EC19700E8B55C /* 观察者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B8B3431208EC1CC00E8B55C /* ObserverViewController.h */,
+				3B8B3432208EC1CC00E8B55C /* ObserverViewController.m */,
+			);
+			path = "观察者模式";
+			sourceTree = "<group>";
+		};
+		3B8B343D208EC83900E8B55C /* 模板方法 */ = {
+			isa = PBXGroup;
+			children = (
+				3B8B343E208EC83900E8B55C /* MouldViewController.h */,
+				3B8B343F208EC83900E8B55C /* MouldViewController.m */,
+				3B8B3441208EC87E00E8B55C /* SonViewController.h */,
+				3B8B3442208EC87E00E8B55C /* SonViewController.m */,
+			);
+			path = "模板方法";
+			sourceTree = "<group>";
+		};
+		3B8B3444208ECFED00E8B55C /* 命令模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3B8B3445208ED01000E8B55C /* CommandViewController.h */,
+				3B8B3446208ED01000E8B55C /* CommandViewController.m */,
+				3B8B3448208F002800E8B55C /* CommandManager.h */,
+				3B8B3449208F002800E8B55C /* CommandManager.m */,
+				3B8B344B208F0C0900E8B55C /* CommandImplement.h */,
+				3B8B344C208F0C0900E8B55C /* CommandImplement.m */,
+			);
+			path = "命令模式";
+			sourceTree = "<group>";
+		};
+		3BC6284A208DB27300A08819 /* 建造者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3BC6284B208DB29B00A08819 /* CreatViewController.h */,
+				3BC6284C208DB29B00A08819 /* CreatViewController.m */,
+				3BC6284E208DB32B00A08819 /* girlFriend.h */,
+				3BC6284F208DB32B00A08819 /* girlFriend.m */,
+				3BC62851208DB3D000A08819 /* grilInfo.h */,
+				3BC62852208DB3D000A08819 /* grilInfo.m */,
+				3BC62854208DB5B300A08819 /* yl.h */,
+				3BC62855208DB5B300A08819 /* yl.m */,
+			);
+			path = "建造者模式";
+			sourceTree = "<group>";
+		};
+		3BC8604E20A2D4EE00013D6E /* 中介者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3BC8604B20A2D4D300013D6E /* MediatorViewController.h */,
+				3BC8604C20A2D4D300013D6E /* MediatorViewController.m */,
+				3BC8605520A2F00000013D6E /* ResultViewController.h */,
+				3BC8605620A2F00000013D6E /* ResultViewController.m */,
+				3BC8604F20A2E4E900013D6E /* mediator.h */,
+				3BC8605020A2E4E900013D6E /* mediator.m */,
+				3BC8605220A2E4F300013D6E /* user.h */,
+				3BC8605320A2E4F300013D6E /* user.m */,
+			);
+			path = "中介者模式";
+			sourceTree = "<group>";
+		};
+		3BDF248F20A144F200C4F0F3 /* 策略模式 */ = {
+			isa = PBXGroup;
+			children = (
+				3BDF249020A1454300C4F0F3 /* StrategyViewController.h */,
+				3BDF249120A1454300C4F0F3 /* StrategyViewController.m */,
+				3BDF249320A1472800C4F0F3 /* thisStrategy.h */,
+				3BDF249420A1472800C4F0F3 /* thisStrategy.m */,
+			);
+			path = "策略模式";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +573,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C755E91F96FE190070395F /* LaunchScreen.storyboard in Resources */,
+				3B5A10092180035900FC3F75 /* banner3.png in Resources */,
 				18C755E61F96FE190070395F /* Assets.xcassets in Resources */,
 				18C755E41F96FE190070395F /* Main.storyboard in Resources */,
+				3B0CA837217F248F007F1AA7 /* RunloopTbCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,20 +587,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8B3447208ED01000E8B55C /* CommandViewController.m in Sources */,
 				189149A51FCBFE8B0064BF6B /* RunloopVC.m in Sources */,
+				3B85DA6520AD176500FD23CA /* AdapterViewController.m in Sources */,
+				3B85402B208DD48A004F5479 /* Friend.m in Sources */,
+				3B01E75820A98EC700250F9E /* proxyView.m in Sources */,
+				3B21BD3920AC2ACC00C1C2B3 /* CombinationViewController.m in Sources */,
+				3B85402F208DE86F004F5479 /* IteratorViewController.m in Sources */,
+				3BCCCBC4207F0ADD0039486C /* KVCViewController.m in Sources */,
+				3B8B344A208F002800E8B55C /* CommandManager.m in Sources */,
+				3BDF249220A1454300C4F0F3 /* StrategyViewController.m in Sources */,
+				3BB2824320844DF80095B57E /* AbstractFactory.m in Sources */,
 				18C755F61F96FF4F0070395F /* CharacteristicVC.m in Sources */,
 				1860D07F1FCF94880095E122 /* SonOperation.m in Sources */,
+				3B19C9742080A2B9008A0A7E /* SingtonManager.m in Sources */,
+				3BC6284D208DB29B00A08819 /* CreatViewController.m in Sources */,
+				3BDF249520A1472800C4F0F3 /* thisStrategy.m in Sources */,
+				3BC62856208DB5B300A08819 /* yl.m in Sources */,
+				3BC62853208DB3D000A08819 /* grilInfo.m in Sources */,
+				3B85DA6820AD177C00FD23CA /* adaptorModel.m in Sources */,
 				18C7560E1F9728EA0070395F /* NSStringSecond.m in Sources */,
+				3BC8605420A2E4F300013D6E /* user.m in Sources */,
 				18CDC8C81FC7B124000BC28B /* ViewController.m in Sources */,
+				3B8B344D208F0C0900E8B55C /* CommandImplement.m in Sources */,
+				3B19C9782080AF65008A0A7E /* FactoryMethod.m in Sources */,
+				3B8B3433208EC1CC00E8B55C /* ObserverViewController.m in Sources */,
+				3B85DA7020AD305200FD23CA /* DecorateViewController.m in Sources */,
 				18CDC8C21FC7B07C000BC28B /* FatherClass.m in Sources */,
+				3B01E75B20A993FC00250F9E /* SProxyViewController.m in Sources */,
+				3B8B3440208EC83900E8B55C /* MouldViewController.m in Sources */,
+				3B85DA7320AD306D00FD23CA /* DecorateObject.m in Sources */,
+				3B85403B208DF730004F5479 /* Iterator.m in Sources */,
+				3B8B3443208EC87E00E8B55C /* SonViewController.m in Sources */,
+				3B01E75520A98EA200250F9E /* ProxyViewController.m in Sources */,
 				18B6D9D11FC8F88300B5C269 /* RuntimeVC.m in Sources */,
 				18C755EC1F96FE190070395F /* main.m in Sources */,
+				3BC8605120A2E4E900013D6E /* mediator.m in Sources */,
 				18CDC8C51FC7B087000BC28B /* SonClass.m in Sources */,
+				3BC8605720A2F00000013D6E /* ResultViewController.m in Sources */,
+				3BC8604D20A2D4D300013D6E /* MediatorViewController.m in Sources */,
+				3BCCCBC7207F53BE0039486C /* KVOViewController.m in Sources */,
 				18C7560D1F9728EA0070395F /* NSStringOne.m in Sources */,
+				3B19C97B2080B48C008A0A7E /* TestViewController.m in Sources */,
+				3B0CA836217F248F007F1AA7 /* RunloopTbCell.m in Sources */,
 				187A4F511FCE43880080D4B9 /* GCDViewController.m in Sources */,
+				3B854038208DF71F004F5479 /* CustomSet.m in Sources */,
 				18C755DE1F96FE190070395F /* AppDelegate.m in Sources */,
 				1860D07C1FCF91FF0095E122 /* NSOperationVC.m in Sources */,
+				3B21BD3C20AC2AEF00C1C2B3 /* TestObject.m in Sources */,
+				3BC62850208DB32B00A08819 /* girlFriend.m in Sources */,
 				18B6D9D41FC8F89C00B5C269 /* Model.m in Sources */,
+				3B854035208DF715004F5479 /* Element.m in Sources */,
+				3B85DA6B20AD188300FD23CA /* adaptorView.m in Sources */,
+				3B626278218954BC009AC53B /* NSArray+empty.m in Sources */,
 				189BA4831FCCF80600425BAA /* MyThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,11 +775,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VBJP4XZA96;
+				DEVELOPMENT_TEAM = 444RV65HMS;
+				GCC_PREFIX_HEADER = OC/PrefixHeader.pch;
 				INFOPLIST_FILE = OC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = slq.com.x;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slq.xxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,11 +791,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VBJP4XZA96;
+				DEVELOPMENT_TEAM = 444RV65HMS;
+				GCC_PREFIX_HEADER = OC/PrefixHeader.pch;
 				INFOPLIST_FILE = OC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = slq.com.x;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slq.xxx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

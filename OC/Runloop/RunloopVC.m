@@ -9,12 +9,14 @@
 /*
  参考:http://blog.csdn.net/u011619283/article/details/53433243
      http://www.cocoachina.com/ios/20150601/11970.html
+     https://www.jianshu.com/p/23e3ff9619c3
  */
 
 #import "RunloopVC.h"
 #import "MyThread.h"
+#import "RunloopTbCell.h"
 
-@interface RunloopVC ()<UIScrollViewDelegate>
+@interface RunloopVC ()<UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -23,6 +25,9 @@
 @property (nonatomic, strong) NSTimer *timer4;
 
 @property (nonatomic, strong) MyThread *thread;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSMutableArray *heightArr;
 
 @end
 
@@ -36,7 +41,8 @@ static int num = 5;
 //    [self RunloopTest1];
 //    [self RunloopTest2];
 //    [self RunloopTest3];
-    [self RunloopTest4];
+//    [self RunloopTest4];
+    [self configTableView];
     
 }
 
@@ -155,7 +161,7 @@ void callBack(CFRunLoopObserverRef observer,CFRunLoopActivity activity,void *inf
 //3、防止主线程运行NSTUITrackingRunLoopMode时暂停NSDefaultRunLoopMode模式下的任务
 -(void)RunloopTest4
 {
-    UIScrollView *scrollview = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIScrollView *scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 100)];
     scrollview.delegate = self;
     scrollview.contentSize = CGSizeMake(WIDTH, 1.5*HEIGHT);
     [self.view addSubview:scrollview];
@@ -167,13 +173,15 @@ void callBack(CFRunLoopObserverRef observer,CFRunLoopActivity activity,void *inf
     lab.text = [NSString stringWithFormat:@"%d", num];
     [scrollview addSubview:lab];
     
-    //a、_timer4默认添加到主线程，则滑动时（UITrackingRunLoopMode）会暂停_timer4计时器（kCFRunLoopDefaultMode）
+    //_timer4默认添加到主线程，则滑动时（UITrackingRunLoopMode）会暂停_timer4计时器（kCFRunLoopDefaultMode）
     _timer4 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(TimeChange2) userInfo:nil repeats:YES];
     
-//    //b、首先创建一个子线程同时在响应方法中获取runloop，然后将计时器对象_timer4加入到该子线程中。这样就可避免scrollview滑动时影响到该计时器的计时（不同线程间的runloop不会相互影响）。
+//    //a、首先创建一个子线程同时在响应方法中获取runloop，然后将计时器对象_timer4加入到该子线程中。这样就可避免scrollview滑动时影响到该计时器的计时（不同线程间的runloop不会相互影响）
 //    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(SetRunloop) object:nil];
 //    [thread start];
 //    [self performSelector:@selector(CreateNSTimer) onThread:thread withObject:nil waitUntilDone:NO];
+    //b、将NSTimer添加到NSRunLoop的不同模式中（NSRunLoopCommonModes常用的模式，包含NSDefaultRunLoopMode、UITrackingRunLoopMode）
+    [[NSRunLoop currentRunLoop] addTimer:_timer4 forMode:UITrackingRunLoopMode];
 }
 
 //-(void)SetRunloop
@@ -209,20 +217,76 @@ void callBack(CFRunLoopObserverRef observer,CFRunLoopActivity activity,void *inf
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     NSLog(@"滑动的runloop模式：%@", runloop.currentMode);
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark 第4种
+-(void)configTableView
+{
+    [self.dataArr removeAllObjects];
+    for(int i = 0; i < 10; i++)
+    {
+        NSDictionary *dic = @{@"img" : @"banner3", @"title" : @"ddddd的点点滴滴多多多多多多多多多多多ffffffffffffffff少时诵诗书所所所所所所多付付付少时诵诗书所所所所所付付付付付付付付付付付多多的点点滴滴多多多多多多多多多多多多多多多的点点滴滴多多多多多多少时诵诗书所"};
+        [self.dataArr addObject:dic];
+    }
+    for(int i = 10; i < 20; i++)
+    {
+        NSDictionary *dic = @{@"img" : @"banner3", @"title" : @"反反复复付付付付付付付付"};
+        [self.dataArr addObject:dic];
+    }
+    
+//    [self performSelector:@selector(getCellHeight) withObject:nil afterDelay:2 inModes:@[NSRunLoopCommonModes]];
+    [self performSelector:@selector(getCellHeight) withObject:nil afterDelay:2];
+}
+-(void)getCellHeight
+{
+    NSLog(@"计算cell高度");
+    [self.heightArr removeAllObjects];
+    for(int i = 0; i < self.dataArr.count; i++)
+    {
+        CGRect rect = [self.dataArr[i] boundingRectWithSize:CGSizeMake(WIDTH - 30, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+        [self.heightArr addObject:@(CGRectGetHeight(rect))];
+    }
+}
+#pragma delegate/dataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataArr.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RunloopTbCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    [cell loadDataToView:self.dataArr[indexPath.row]];
+    return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.heightArr[indexPath.row] floatValue];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark getter
+-(UITableView *)tableView
+{
+    if(!_tableView)
+    {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, WIDTH, 200) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
 }
-*/
+-(NSMutableArray *)dataArr
+{
+    if(!_dataArr)
+    {
+        _dataArr = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _dataArr;
+}
+-(NSMutableArray *)heightArr
+{
+    if(!_heightArr)
+    {
+        _heightArr = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _heightArr;
+}
 
 @end

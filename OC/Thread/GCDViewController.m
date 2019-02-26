@@ -33,12 +33,13 @@ static GCDViewController *shareVC;
 //    [self GCDGroup5];
 //    [self GCDGroup6];
     
-    //GCD线程通讯
+//    //GCD线程通讯
 //    [self ThreadCommunication];
 //    [self ThreadGroupCommunication];
     
     //其他功能
-    [self fence];
+//    [self fence];
+    [self semaphore];
 }
 
 /*
@@ -117,10 +118,14 @@ static GCDViewController *shareVC;
 //        [self GCDGroup3];
 //    });
     
-    NSThread *thread = [[NSThread alloc] initWithBlock:^{                   //使用NSThread创建线程
-        [self GCDGroup3];
-    }];
-    [thread start];
+    if (@available(iOS 10.0, *)) {
+        NSThread *thread = [[NSThread alloc] initWithBlock:^{                   //使用NSThread创建线程
+            [self GCDGroup3];
+        }];
+        [thread start];
+    } else {
+        // Fallback on earlier versions
+    }
 }
 //4、异步并行队列
 -(void)GCDGroup4
@@ -198,15 +203,27 @@ static GCDViewController *shareVC;
 {
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT);
+    //一个线程下的任务是按照排列顺序执行的
     dispatch_group_async(group, queue, ^{
         NSLog(@"线程一%@", [NSThread currentThread]);
+        //在异步线程中放置一个同步线程任务，则该同步任务会和其外部任务一起按照排列顺序执行（类似于在主线程上开启一个同步线程），该任务未执行完则不会执行其下面的任务，即下个任务的开始时间就是这个任务的结束时间
+        dispatch_sync(queue, ^{
+            sleep(2);
+            NSLog(@"线程一的内部同步线程任务");
+        });
+        NSLog(@"线程二");
+        //异步线程中放置一个异步线程任务，知道该任务的执行开始时间（在“线程二“任务完成后执行），但不知道其结束时间，所以dispatch_group_notify()无法监听该任务的结束
+        dispatch_async(queue, ^{
+//            sleep(1);                 //模拟项目中的耗时操作
+            NSLog(@"线程一内部异步线程任务");
+        });
+        NSLog(@"线程三");    //因为上个任务是异步执行，所以该任务会在上个任务开始执行的同时开始执行
     });
-    dispatch_group_async(group, queue, ^{
-        NSLog(@"线程二%@", [NSThread currentThread]);
-    });
-    
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{    //这里获取主队列
         NSLog(@"任务完成返回主线程");
+    });
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"线程四%@", [NSThread currentThread]);
     });
 }
 
@@ -239,6 +256,31 @@ static GCDViewController *shareVC;
     });
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"任务二");
+    });
+}
+//4、信号量：类似于NSOperationQueue的最大并发线程数量
+-(void)semaphore
+{
+    //设置GCD的信号量为2，即同时可执行的最大并发量为2，每执行一个线程任务信号量就-1，若减到0则其他未执行的线程任务将处于等待状态，当正在执行的线程任务结束时信号量会+1，则可执行其他线程任务且信号量-1。
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(2);
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        //若信号量为0则3秒之后执行其后面的语句，否则信号量-1并直接执行其后面的语句
+        dispatch_semaphore_wait(semaphore, 0);
+        NSLog(@"线程1\n");
+        dispatch_semaphore_signal(semaphore);
+    });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        //信号量-1（若信号量为0则1秒之后执行其后面的语句且不-1并进入等待状态，否则信号量-1并直接执行其后面的语句）
+        dispatch_semaphore_wait(semaphore, 0);
+        NSLog(@"线程2\n");
+        dispatch_semaphore_signal(semaphore);           //信号量+1
+    });
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        //若信号量为0则1秒之后执行其后面的语句，否则信号量-1并直接执行其后面的语句
+        dispatch_semaphore_wait(semaphore, 0);
+        NSLog(@"线程3\n");
+        dispatch_semaphore_signal(semaphore);
     });
 }
 

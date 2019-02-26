@@ -13,6 +13,19 @@
 #import "RunloopVC.h"
 #import "GCDViewController.h"
 #import "NSOperationVC.h"
+#import "KVCViewController.h"
+#import "KVOViewController.h"
+#import "TestViewController.h"
+#import "CreatViewController.h"
+#import "ObserverViewController.h"
+#import "SonViewController.h"
+#import "CommandViewController.h"
+#import "StrategyViewController.h"
+#import "MediatorViewController.h"
+#import "ProxyViewController.h"
+#import "CombinationViewController.h"
+#import "AdapterViewController.h"
+#import "DecorateViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,10 +42,33 @@
 //    self.window.rootViewController = [[RuntimeVC alloc] init];
 //    self.window.rootViewController = [[RunloopVC alloc] init];
 //    self.window.rootViewController = [[GCDViewController alloc] init];
-    self.window.rootViewController = [[NSOperationVC alloc] init];
+//    self.window.rootViewController = [[NSOperationVC alloc] init];
+    self.window.rootViewController = [[KVCViewController alloc] init];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[KVOViewController alloc] init]];
+//    self.window.rootViewController = [[TestViewController alloc] init];
+//    self.window.rootViewController = [CreatViewController new];
+//    self.window.rootViewController = [ObserverViewController new];
+//    self.window.rootViewController = [[SonViewController alloc] init];
+//    self.window.rootViewController = [[CommandViewController alloc] init];
+//    self.window.rootViewController = [[StrategyViewController alloc] init];
+//    self.window.rootViewController = [MediatorViewController new];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ProxyViewController new]];
+//    self.window.rootViewController = [[CombinationViewController alloc] init];
+//    self.window.rootViewController = [[AdapterViewController alloc] init];
+//    self.window.rootViewController = [[DecorateViewController alloc] init];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(TestObserver:) name:@"TestObserver" object:nil];
+    
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+-(void)TestObserver:(NSNotification *)notify
+{
+    NSLog(@"观察者获取的改变数据：%@", notify.userInfo);
+    
 }
 
 
